@@ -514,9 +514,10 @@
       btn.textContent = collapsed ? 'Prikaži' : 'Sakrij';
     }
 
+    const v = Date.now();
     Promise.all([
-      fetch('blocks.csv').then(r => r.text()),
-      fetch('playlist.csv').then(r => r.text())
+      fetch(`blocks.csv?v=${v}`).then(r => r.text()),
+      fetch(`playlist.csv?v=${v}`).then(r => r.text())
     ]).then(([blocksText, playlistText]) => {
       buildTimeline(parseCSV(blocksText), parseCSV(playlistText));
     }).catch(err => {
