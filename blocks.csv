@@ -1,15 +1,16 @@
-block,order_id,label,time,duration
-duplikat,0,Duplikat,,
-starogradska,1,Starogradske pesme,16:30,45 min
-prvi_ples,2,Prvi ples,17:30,30 min
-prelaz1,3,Prelaz 1 (balade),,
-turbofolk,5,Turbofolk,,60 min
-pred_kolo,6,Pred kolo,,
-kolo,7,Kolo,,
-folk,8,Folk,,
-torta,9,Torta,,
-posle_torte,10,Posle torte I,,
-posle_torte2,11,Posle torte II,,
-folk2,12,Folk II,,
-pijani_kraj,13,Pijani kraj,,
-balade2,14,Balade II,,
+block,order_id,label,fixed_minutes
+duplikat,0,Duplikat,
+starogradska,1,Starogradske pesme,
+vencanje,2,Venčanje sa matičnom službom,15
+prvi_ples,3,Prvi ples,
+prelaz1,4,Prelaz 1 (balade),
+turbofolk,5,Turbofolk,
+pred_kolo,6,Pred kolo,
+kolo,7,Kolo,
+folk,8,Folk,
+torta,9,Torta,
+posle_torte,10,Posle torte I,
+posle_torte2,11,Posle torte II,
+folk2,12,Folk II,
+pijani_kraj,13,Pijani kraj,
+balade2,14,Balade II,

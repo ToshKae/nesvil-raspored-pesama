@@ -400,6 +400,12 @@
       return s > 0 ? `${m} min ${s} sec` : `${m} min`;
     }
 
+    function addMinutes(hhmm, mins) {
+      const [h, m] = hhmm.split(':').map(Number);
+      const total = h * 60 + m + mins;
+      return `${String(Math.floor(total / 60)).padStart(2,'0')}:${String(total % 60).padStart(2,'0')}`;
+    }
+
     function buildTimeline(blocks, songs) {
       const byBlock = {};
       songs.forEach(s => {
@@ -411,11 +417,20 @@
       const timeline = document.getElementById('timeline');
       const sorted = blocks.filter(b => b.block !== 'duplikat').sort((a, b) => +a.order_id - +b.order_id);
 
+      let cursor = '16:30'; // start after slikanje
+
       timeline.innerHTML = sorted.map((b, idx) => {
         const list = byBlock[b.block] || [];
+        const startTime = cursor;
 
-        const totalSecs = list.reduce((sum, s) => sum + parseDuration(s.duration), 0);
-        const totalHTML = list.length
+        const totalSecs = b.fixed_minutes
+          ? +b.fixed_minutes * 60
+          : list.reduce((sum, s) => sum + parseDuration(s.duration), 0);
+
+        const totalMins = Math.ceil(totalSecs / 60);
+        cursor = addMinutes(cursor, totalMins);
+
+        const totalHTML = totalSecs > 0
           ? `<div class="block-total">Ukupno: ${formatTotal(totalSecs)}</div>`
           : '';
 
@@ -423,17 +438,17 @@
           ? '<ul class="songs">' + list.map((s, i) =>
               `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span>${s.title}</a></li>`
             ).join('') + '</ul>' + totalHTML
-          : '<p class="no-songs">Pesme — placeholder</p>';
+          : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>` + totalHTML;
 
         const delay = (idx * 0.1).toFixed(1);
 
         return `
           <div class="block" style="animation-delay:${delay}s">
             <div class="time-col">
-              <div class="time">${b.time || '— : —'}</div>
-              <div class="duration">${b.duration || '—'}</div>
+              <div class="time">${startTime}</div>
+              <div class="duration">${totalMins ? totalMins + ' min' : '—'}</div>
             </div>
-            <div class="dot"></div>
+            <div class="dot${b.block === 'vencanje' ? ' gold' : ''}"></div>
             <div class="content">
               <span class="block-label">${b.label}</span>
               <div class="block-title">${b.label}</div>
