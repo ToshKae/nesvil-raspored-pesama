@@ -459,7 +459,7 @@
     }
 
     function buildTimeline(blocks, songs) {
-      const SKIP_BLOCKS = ['duplikat', 'skip'];
+      const SKIP_BLOCKS = ['duplikat', 'skip', 'balade2'];
       const byBlock = {};
       songs.forEach(s => {
         if (!s.block || SKIP_BLOCKS.includes(s.block)) return;
