@@ -459,15 +459,16 @@
     }
 
     function buildTimeline(blocks, songs) {
+      const SKIP_BLOCKS = ['duplikat', 'skip'];
       const byBlock = {};
       songs.forEach(s => {
-        if (!s.block) return;
+        if (!s.block || SKIP_BLOCKS.includes(s.block)) return;
         if (!byBlock[s.block]) byBlock[s.block] = [];
         byBlock[s.block].push(s);
       });
 
       const timeline = document.getElementById('timeline');
-      const sorted = blocks.filter(b => b.block !== 'duplikat' && b.block !== 'skip').sort((a, b) => +a.order_id - +b.order_id);
+      const sorted = blocks.filter(b => !SKIP_BLOCKS.includes(b.block)).sort((a, b) => +a.order_id - +b.order_id);
 
       let cursor = '16:30'; // start after slikanje
 
