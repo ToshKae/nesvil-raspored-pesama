@@ -467,7 +467,7 @@
       });
 
       const timeline = document.getElementById('timeline');
-      const sorted = blocks.filter(b => b.block !== 'duplikat').sort((a, b) => +a.order_id - +b.order_id);
+      const sorted = blocks.filter(b => b.block !== 'duplikat' && b.block !== 'skip').sort((a, b) => +a.order_id - +b.order_id);
 
       let cursor = '16:30'; // start after slikanje
 
