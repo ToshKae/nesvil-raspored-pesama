@@ -251,6 +251,18 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
 
+    .songs li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .songs li a:hover { color: #d4af37; }
+    body.dark .songs li a:hover { color: #d4af37; }
+
     .songs li .num {
       font-size: 0.68rem;
       color: #ccc;
@@ -409,7 +421,7 @@
 
         const songsHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
-              `<li><span class="num">${i + 1}</span>${s.title}</li>`
+              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span>${s.title}</a></li>`
             ).join('') + '</ul>' + totalHTML
           : '<p class="no-songs">Pesme — placeholder</p>';
 
