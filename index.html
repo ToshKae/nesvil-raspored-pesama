@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raspored pesama — Svadba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fdf6f0;
+      min-height: 100vh;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark {
+      background: #141414;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 25px 20px 60px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+      animation: fadeUp 0.8s ease-out;
+      position: relative;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .title { color: #f0f0f0; }
+    .title span { color: #d4af37; }
+    .title small { font-size: 0.55em; color: #aaa; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 0.04em; }
+    body.dark .title small { color: #666; }
+
+    /* Theme toggle */
+    .theme-toggle {
+      display: flex;
+      background: #e8ddd4;
+      border-radius: 20px;
+      padding: 3px;
+      border: none;
+      cursor: pointer;
+      gap: 0;
+      transition: background 0.3s ease;
+    }
+
+    body.dark .theme-toggle { background: #2a2a2a; }
+
+    .theme-toggle .opt {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 3px 9px;
+      border-radius: 16px;
+      color: #aaa;
+      transition: background 0.25s ease, color 0.25s ease;
+      user-select: none;
+    }
+
+    .theme-toggle .opt.active {
+      background: #fff;
+      color: #1a1a1a;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    body.dark .theme-toggle .opt.active {
+      background: #3a3a3a;
+      color: #f0f0f0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .subheader {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      margin-bottom: 28px;
+      margin-top: 6px;
+      animation: fadeUp 0.8s ease-out 0.1s both;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      color: #999;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .section-label { color: #666; }
+
+    /* Timeline */
+    .timeline { position: relative; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 72px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, #e8d5b0 40px, #e8d5b0 calc(100% - 40px), transparent);
+      transition: background 0.3s ease;
+    }
+
+    body.dark .timeline::before {
+      background: linear-gradient(to bottom, transparent, #3a3020 40px, #3a3020 calc(100% - 40px), transparent);
+    }
+
+    .block {
+      display: flex;
+      gap: 0;
+      margin-bottom: 32px;
+      position: relative;
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .block:nth-child(1) { animation-delay: 0.15s; }
+    .block:nth-child(2) { animation-delay: 0.25s; }
+    .block:nth-child(3) { animation-delay: 0.35s; }
+    .block:nth-child(4) { animation-delay: 0.45s; }
+    .block:nth-child(5) { animation-delay: 0.55s; }
+    .block:nth-child(6) { animation-delay: 0.65s; }
+    .block:nth-child(7) { animation-delay: 0.75s; }
+    .block:nth-child(8) { animation-delay: 0.85s; }
+
+    .time-col {
+      width: 72px;
+      flex-shrink: 0;
+      text-align: right;
+      padding-top: 2px;
+    }
+
+    .time {
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      color: #888;
+      letter-spacing: 0.03em;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .time { color: #666; }
+
+    .duration {
+      font-size: 0.68rem;
+      color: #bbb;
+      margin-top: 3px;
+      font-weight: 300;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .duration { color: #555; }
+
+    .dot {
+      position: absolute;
+      left: 66px;
+      top: 5px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid #d4af37;
+      background: #fdf6f0;
+      transition: background 0.3s ease;
+    }
+
+    body.dark .dot { background: #141414; }
+    .dot.gold { background: #d4af37 !important; }
+
+    .content {
+      flex: 1;
+      padding-left: 28px;
+    }
+
+    .block-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      background: rgba(212, 175, 55, 0.12);
+      color: #b8942a;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark .block-label {
+      background: rgba(212, 175, 55, 0.15);
+      color: #c9a432;
+    }
+
+    .block-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .block-title { color: #f0f0f0; }
+
+    .songs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .songs li {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #555;
+      padding: 6px 10px;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body.dark .songs li {
+      background: #1f1f1f;
+      color: #bbb;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .songs li .num {
+      font-size: 0.68rem;
+      color: #ccc;
+      width: 16px;
+      text-align: right;
+      flex-shrink: 0;
+      font-family: 'Courier New', monospace;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .songs li .num { color: #555; }
+
+    .no-songs {
+      font-size: 0.8rem;
+      color: #bbb;
+      font-style: italic;
+      font-weight: 300;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .no-songs { color: #555; }
+
+    /* ceremony */
+    .block.ceremony .dot { background: #d4af37; }
+    .block.ceremony .block-label { background: rgba(212, 175, 55, 0.2); color: #9a7a1a; }
+    .block.ceremony .block-title { color: #9a7a1a; }
+    body.dark .block.ceremony .block-label { color: #c9a432; }
+    body.dark .block.ceremony .block-title { color: #c9a432; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 400px) {
+      .title { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1 class="title">Raspored <span>pesama</span> <small>(31.05.26.)</small></h1>
+    </header>
+
+    <div class="subheader">
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="opt active" id="opt-light">Svetla</span>
+        <span class="opt" id="opt-dark">Tamna</span>
+      </button>
+      <span class="section-label">(pozadina)</span>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const dark = document.body.classList.toggle('dark');
+      document.getElementById('opt-light').classList.toggle('active', !dark);
+      document.getElementById('opt-dark').classList.toggle('active', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+      document.getElementById('opt-light').classList.remove('active');
+      document.getElementById('opt-dark').classList.add('active');
+    }
+
+    // --- CSV parser (handles quoted fields) ---
+    function parseCSV(text) {
+      const lines = text.trim().split('\n');
+      const headers = parseLine(lines[0]);
+      return lines.slice(1).map(line => {
+        const cols = parseLine(line);
+        const obj = {};
+        headers.forEach((h, i) => obj[h.trim()] = (cols[i] || '').trim());
+        return obj;
+      }).filter(row => Object.values(row).some(v => v));
+    }
+
+    function parseLine(line) {
+      const cols = [];
+      let cur = '', inQ = false;
+      for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (c === '"') { inQ = !inQ; }
+        else if (c === ',' && !inQ) { cols.push(cur); cur = ''; }
+        else { cur += c; }
+      }
+      cols.push(cur);
+      return cols;
+    }
+
+    function buildTimeline(blocks, songs) {
+      const byBlock = {};
+      songs.forEach(s => {
+        if (!s.block) return;
+        if (!byBlock[s.block]) byBlock[s.block] = [];
+        byBlock[s.block].push(s);
+      });
+
+      const timeline = document.getElementById('timeline');
+      const sorted = blocks.sort((a, b) => +a.order_id - +b.order_id);
+
+      timeline.innerHTML = sorted.map((b, idx) => {
+        const list = byBlock[b.block] || [];
+        const songsHTML = list.length
+          ? '<ul class="songs">' + list.map((s, i) =>
+              `<li><span class="num">${i + 1}</span>${s.title}</li>`
+            ).join('') + '</ul>'
+          : '<p class="no-songs">Pesme — placeholder</p>';
+
+        const delay = (idx * 0.1).toFixed(1);
+
+        return `
+          <div class="block" style="animation-delay:${delay}s">
+            <div class="time-col">
+              <div class="time">${b.time || '— : —'}</div>
+              <div class="duration">${b.duration || '—'}</div>
+            </div>
+            <div class="dot"></div>
+            <div class="content">
+              <span class="block-label">${b.label}</span>
+              <div class="block-title">${b.label}</div>
+              ${songsHTML}
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    Promise.all([
+      fetch('blocks.csv').then(r => r.text()),
+      fetch('playlist.csv').then(r => r.text())
+    ]).then(([blocksText, playlistText]) => {
+      buildTimeline(parseCSV(blocksText), parseCSV(playlistText));
+    }).catch(err => {
+      document.getElementById('timeline').innerHTML =
+        '<p style="color:#c00;font-family:sans-serif;padding:20px">Greška pri učitavanju CSV-a. Otvori stranicu preko servera (ne file://).<br><small>' + err + '</small></p>';
+    });
+  </script>
+</body>
+</html>
