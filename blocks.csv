@@ -2,8 +2,7 @@ block,order_id,label,time,duration
 duplikat,0,Duplikat,,
 starogradska,1,Starogradske pesme,16:30,45 min
 prvi_ples,2,Prvi ples,17:30,30 min
-balade1,3,Balade I,18:00,— min
-posle_balade1,4,Posle balade I,,
+prelaz1,3,Prelaz 1 (balade),,
 turbofolk,5,Turbofolk,,60 min
 pred_kolo,6,Pred kolo,,
 kolo,7,Kolo,,
