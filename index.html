@@ -298,6 +298,47 @@
 
     body.dark .block-total { color: #c9a432; }
 
+    .block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .block-header-left { display: flex; flex-direction: column; }
+
+    .collapse-btn {
+      font-size: 0.65rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ccc;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px 0;
+      transition: color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .collapse-btn:hover { color: #d4af37; }
+    body.dark .collapse-btn { color: #555; }
+    body.dark .collapse-btn:hover { color: #d4af37; }
+
+    .songs-wrap {
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      max-height: 2000px;
+      opacity: 1;
+    }
+
+    .songs-wrap.collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+
     /* ceremony */
     .block.ceremony .dot { background: #d4af37; }
     .block.ceremony .block-label { background: rgba(212, 175, 55, 0.2); color: #9a7a1a; }
@@ -434,11 +475,15 @@
           ? `<div class="block-total">Ukupno: ${formatTotal(totalSecs)}</div>`
           : '';
 
-        const songsHTML = list.length
+        const innerHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
               `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span>${s.title}</a></li>`
             ).join('') + '</ul>' + totalHTML
-          : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>` + totalHTML;
+          : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
+
+        const collapseBtn = list.length
+          ? `<button class="collapse-btn" onclick="toggleBlock(this)">Sakrij</button>`
+          : '';
 
         const delay = (idx * 0.1).toFixed(1);
 
@@ -450,12 +495,23 @@
             </div>
             <div class="dot${b.block === 'vencanje' ? ' gold' : ''}"></div>
             <div class="content">
-              <span class="block-label">${b.label}</span>
-              <div class="block-title">${b.label}</div>
-              ${songsHTML}
+              <div class="block-header">
+                <div class="block-header-left">
+                  <span class="block-label">${b.label}</span>
+                  <div class="block-title">${b.label}</div>
+                </div>
+                ${collapseBtn}
+              </div>
+              <div class="songs-wrap">${innerHTML}</div>
             </div>
           </div>`;
       }).join('');
+    }
+
+    function toggleBlock(btn) {
+      const wrap = btn.closest('.content').querySelector('.songs-wrap');
+      const collapsed = wrap.classList.toggle('collapsed');
+      btn.textContent = collapsed ? 'Prikaži' : 'Sakrij';
     }
 
     Promise.all([
