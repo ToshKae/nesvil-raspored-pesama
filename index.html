@@ -304,7 +304,23 @@
       <span class="section-label">(pozadina)</span>
     </div>
 
-    <div class="timeline" id="timeline"></div>
+    <div class="timeline">
+
+      <div class="block">
+        <div class="time-col">
+          <div class="time">15:00</div>
+          <div class="duration">90 min</div>
+        </div>
+        <div class="dot"></div>
+        <div class="content">
+          <span class="block-label">Doček gostiju</span>
+          <div class="block-title">Slikanje sa mladencima</div>
+        </div>
+      </div>
+
+      <div id="timeline"></div>
+
+    </div>
   </div>
 
   <script>
@@ -355,7 +371,7 @@
       });
 
       const timeline = document.getElementById('timeline');
-      const sorted = blocks.sort((a, b) => +a.order_id - +b.order_id);
+      const sorted = blocks.filter(b => b.block !== 'duplikat').sort((a, b) => +a.order_id - +b.order_id);
 
       timeline.innerHTML = sorted.map((b, idx) => {
         const list = byBlock[b.block] || [];
