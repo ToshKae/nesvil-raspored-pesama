@@ -273,6 +273,19 @@
 
     body.dark .no-songs { color: #555; }
 
+    .block-total {
+      margin-top: 8px;
+      font-size: 0.72rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #b8942a;
+      letter-spacing: 0.06em;
+      text-align: right;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .block-total { color: #c9a432; }
+
     /* ceremony */
     .block.ceremony .dot { background: #d4af37; }
     .block.ceremony .block-label { background: rgba(212, 175, 55, 0.2); color: #9a7a1a; }
@@ -363,6 +376,18 @@
       return cols;
     }
 
+    function parseDuration(dur) {
+      if (!dur) return 0;
+      const parts = dur.split(':');
+      return parseInt(parts[0] || 0) * 60 + parseInt(parts[1] || 0);
+    }
+
+    function formatTotal(secs) {
+      const m = Math.floor(secs / 60);
+      const s = secs % 60;
+      return s > 0 ? `${m} min ${s} sec` : `${m} min`;
+    }
+
     function buildTimeline(blocks, songs) {
       const byBlock = {};
       songs.forEach(s => {
@@ -376,10 +401,16 @@
 
       timeline.innerHTML = sorted.map((b, idx) => {
         const list = byBlock[b.block] || [];
+
+        const totalSecs = list.reduce((sum, s) => sum + parseDuration(s.duration), 0);
+        const totalHTML = list.length
+          ? `<div class="block-total">Ukupno: ${formatTotal(totalSecs)}</div>`
+          : '';
+
         const songsHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
               `<li><span class="num">${i + 1}</span>${s.title}</li>`
-            ).join('') + '</ul>'
+            ).join('') + '</ul>' + totalHTML
           : '<p class="no-songs">Pesme — placeholder</p>';
 
         const delay = (idx * 0.1).toFixed(1);
