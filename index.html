@@ -305,6 +305,16 @@
 
     body.dark .songs li .song-dur { color: #444; }
 
+    .songs li .play-icon {
+      color: #ff0000;
+      font-size: 0.6rem;
+      flex-shrink: 0;
+      opacity: 0.75;
+      transition: opacity 0.2s ease;
+    }
+
+    .songs li a:hover .play-icon { opacity: 1; }
+
     .no-songs {
       font-size: 0.8rem;
       color: #bbb;
@@ -545,7 +555,7 @@
 
         const innerHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
-              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
+              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
             ).join('') + '</ul>' + totalHTML
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
@@ -598,7 +608,7 @@
       const skipSongs = songs.filter(s => s.block === 'skip');
       if (skipSongs.length) {
         const skipList = '<ul class="songs">' + skipSongs.map((s, i) =>
-          `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
+          `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
         ).join('') + '</ul>';
         timeline.innerHTML += `
           <div class="block skip-block" style="animation-delay:${(sorted.length * 0.1).toFixed(1)}s">
