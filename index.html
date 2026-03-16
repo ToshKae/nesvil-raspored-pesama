@@ -53,6 +53,13 @@
     .title small { font-size: 0.55em; color: #aaa; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 0.04em; }
     body.dark .title small { color: #666; }
 
+    .theme-toggle-fixed {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 100;
+    }
+
     /* Theme toggle */
     .theme-toggle {
       display: flex;
@@ -409,19 +416,16 @@
   </style>
 </head>
 <body>
+  <button class="theme-toggle theme-toggle-fixed" onclick="toggleTheme()">
+    <span class="opt active" id="opt-light">Svetla</span>
+    <span class="opt" id="opt-dark">Tamna</span>
+  </button>
   <div class="container">
 
     <header class="header">
       <h1 class="title">Raspored <span>pesama</span> <small>(31.05.2026.)</small></h1>
     </header>
 
-    <div class="subheader">
-      <span class="section-label">(pozadina)</span>
-      <button class="theme-toggle" onclick="toggleTheme()">
-        <span class="opt active" id="opt-light">Svetla</span>
-        <span class="opt" id="opt-dark">Tamna</span>
-      </button>
-    </div>
 
     <div class="timeline">
 
