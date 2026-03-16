@@ -312,32 +312,54 @@
 
     .block-header {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
       cursor: pointer;
       user-select: none;
     }
 
-    .block-header-left { display: flex; flex-direction: column; }
-
-    .collapse-btn {
-      font-size: 0.65rem;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ccc;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 2px 0;
-      transition: color 0.2s ease;
-      flex-shrink: 0;
+    .block-header-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
     }
 
-    .collapse-btn:hover { color: #d4af37; }
-    body.dark .collapse-btn { color: #555; }
-    body.dark .collapse-btn:hover { color: #d4af37; }
+    .collapse-btn {
+      display: flex;
+      background: #e8ddd4;
+      border-radius: 20px;
+      padding: 3px;
+      border: none;
+      cursor: pointer;
+      gap: 0;
+      transition: background 0.3s ease;
+    }
+
+    body.dark .collapse-btn { background: #2a2a2a; }
+
+    .collapse-btn .opt {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 3px 9px;
+      border-radius: 16px;
+      color: #aaa;
+      transition: background 0.25s ease, color 0.25s ease;
+      user-select: none;
+    }
+
+    .collapse-btn .opt.active {
+      background: #fff;
+      color: #1a1a1a;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    body.dark .collapse-btn .opt.active {
+      background: #3a3a3a;
+      color: #f0f0f0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
 
     .songs-wrap {
       overflow: hidden;
@@ -495,7 +517,7 @@
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
         const collapseBtn = list.length
-          ? `<button class="collapse-btn" onclick="toggleBlock(this)">Sakrij</button>`
+          ? `<button class="collapse-btn" onclick="toggleBlock(this)"><span class="opt active">Prikaži</span><span class="opt">Sakrij</span></button>`
           : '';
 
         const delay = (idx * 0.1).toFixed(1);
@@ -509,11 +531,11 @@
             <div class="dot${b.block === 'vencanje' ? ' gold' : ''}"></div>
             <div class="content">
               <div class="block-header">
-                <div class="block-header-left">
+                <div class="block-header-top">
                   <span class="block-label">${b.label}</span>
-                  ${b.description ? `<div class="block-description">${b.description}</div>` : ''}
+                  ${collapseBtn}
                 </div>
-                ${collapseBtn}
+                ${b.description ? `<div class="block-description">${b.description}</div>` : ''}
               </div>
               <div class="songs-wrap">${innerHTML}</div>
             </div>
@@ -524,7 +546,9 @@
     function toggleBlock(btn) {
       const wrap = btn.closest('.content').querySelector('.songs-wrap');
       const collapsed = wrap.classList.toggle('collapsed');
-      btn.textContent = collapsed ? 'Prikaži' : 'Sakrij';
+      const opts = btn.querySelectorAll('.opt');
+      opts[0].classList.toggle('active', !collapsed);
+      opts[1].classList.toggle('active', collapsed);
     }
 
     const v = Date.now();
