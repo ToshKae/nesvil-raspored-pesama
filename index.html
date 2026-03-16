@@ -381,6 +381,12 @@
     body.dark .block.ceremony .block-title { color: #c9a432; }
 
 
+
+    .block.end-milestone .dot { background: #c0392b; width: 14px; height: 14px; margin-left: -4px; }
+    .block.end-milestone .block-label { background: rgba(192,57,43,0.12); color: #c0392b; }
+    body.dark .block.end-milestone .block-label { background: rgba(192,57,43,0.15); color: #e74c3c; }
+    .block.end-milestone .time { color: #c0392b; font-weight: 700; }
+
     .block.skip-block .dot { background: #bbb; }
     .block.skip-block .block-label { background: rgba(150,150,150,0.12); color: #999; }
     body.dark .block.skip-block .block-label { background: rgba(150,150,150,0.15); color: #666; }
@@ -548,6 +554,25 @@
             </div>
           </div>`;
       }).join('');
+
+
+      // End milestone
+      timeline.innerHTML += `
+        <div class="block end-milestone" style="animation-delay:${(sorted.length * 0.1).toFixed(1)}s">
+          <div class="time-col">
+            <div class="time">23:00</div>
+            <div class="duration"></div>
+          </div>
+          <div class="dot"></div>
+          <div class="content">
+            <div class="block-header">
+              <div class="block-header-top">
+                <span class="block-label">Kraj proslave</span>
+              </div>
+              <div class="block-description">Do tada je zakupljena sala — zvanični kraj proslave i svirke</div>
+            </div>
+          </div>
+        </div>`;
 
       // Skip songs section
       const skipSongs = songs.filter(s => s.block === 'skip');
