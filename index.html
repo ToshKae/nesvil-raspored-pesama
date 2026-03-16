@@ -576,7 +576,7 @@
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
         const collapseBtn = list.length
-          ? `<button class="collapse-btn" onclick="toggleAuthors(this)"><span class="opt">Prikaži</span><span class="opt active">Sakrij</span></button>`
+          ? `<button class="collapse-btn" onclick="toggleAuthors(this)"><span class="opt">Prikaži autore</span><span class="opt active">Sakrij</span></button>`
           : '';
 
         const delay = (idx * 0.1).toFixed(1);
