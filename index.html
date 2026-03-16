@@ -195,14 +195,12 @@
     }
 
     .block-label {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: inline-block;
       font-size: 0.65rem;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 2px 8px;
       border-radius: 20px;
       margin-bottom: 6px;
       background: rgba(212, 175, 55, 0.12);
@@ -227,18 +225,17 @@
     body.dark .block-title { color: #f0f0f0; }
 
     .block-description {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
-      color: #b8942a;
-      opacity: 0.85;
-      text-transform: none;
-      letter-spacing: 0.02em;
-      margin-top: 2px;
-      transition: color 0.3s ease, opacity 0.3s ease;
+      color: #999;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
     }
 
-    body.dark .block-description { color: #c9a432; opacity: 0.7; }
+    body.dark .block-description { color: #666; }
+    body.hide-descriptions .block-description { display: none; }
 
     .songs {
       list-style: none;
@@ -380,6 +377,10 @@
     </header>
 
     <div class="subheader">
+      <button class="theme-toggle" onclick="toggleDescriptions()">
+        <span class="opt active" id="opt-desc-show">Opisi</span>
+        <span class="opt" id="opt-desc-hide">Sakrij</span>
+      </button>
       <button class="theme-toggle" onclick="toggleTheme()">
         <span class="opt active" id="opt-light">Svetla</span>
         <span class="opt" id="opt-dark">Tamna</span>
@@ -396,7 +397,8 @@
         </div>
         <div class="dot"></div>
         <div class="content">
-          <span class="block-label">Doček gostiju<span class="block-description">Slikanje sa mladencima</span></span>
+          <span class="block-label">Doček gostiju</span>
+          <div class="block-description">Slikanje sa mladencima</div>
         </div>
       </div>
 
@@ -406,6 +408,12 @@
   </div>
 
   <script>
+    function toggleDescriptions() {
+      const hide = document.body.classList.toggle('hide-descriptions');
+      document.getElementById('opt-desc-show').classList.toggle('active', !hide);
+      document.getElementById('opt-desc-hide').classList.toggle('active', hide);
+    }
+
     function toggleTheme() {
       const dark = document.body.classList.toggle('dark');
       document.getElementById('opt-light').classList.toggle('active', !dark);
@@ -513,7 +521,8 @@
             <div class="content">
               <div class="block-header">
                 <div class="block-header-left">
-                  <span class="block-label">${b.label}${b.description ? `<span class="block-description">${b.description}</span>` : ''}</span>
+                  <span class="block-label">${b.label}</span>
+                  ${b.description ? `<div class="block-description">${b.description}</div>` : ''}
                 </div>
                 ${collapseBtn}
               </div>
