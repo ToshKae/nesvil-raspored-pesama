@@ -469,7 +469,7 @@
       <div class="block">
         <div class="time-col">
           <div class="time">15:00</div>
-          <div class="duration">90 min</div>
+          <div class="duration">80 min</div>
         </div>
         <div class="dot"></div>
         <div class="content">
@@ -552,7 +552,7 @@
       const timeline = document.getElementById('timeline');
       const sorted = blocks.filter(b => !SKIP_BLOCKS.includes(b.block)).sort((a, b) => +a.order_id - +b.order_id);
 
-      let cursor = '16:30'; // start after slikanje
+      let cursor = '16:20'; // start after slikanje
 
       timeline.innerHTML = sorted.map((b, idx) => {
         const list = byBlock[b.block] || [];
