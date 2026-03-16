@@ -235,7 +235,6 @@
     }
 
     body.dark .block-description { color: #666; }
-    body.hide-descriptions .block-description { display: none; }
 
     .songs {
       list-style: none;
@@ -377,10 +376,6 @@
     </header>
 
     <div class="subheader">
-      <button class="theme-toggle" onclick="toggleDescriptions()">
-        <span class="opt active" id="opt-desc-show">Opisi</span>
-        <span class="opt" id="opt-desc-hide">Sakrij</span>
-      </button>
       <button class="theme-toggle" onclick="toggleTheme()">
         <span class="opt active" id="opt-light">Svetla</span>
         <span class="opt" id="opt-dark">Tamna</span>
@@ -408,12 +403,6 @@
   </div>
 
   <script>
-    function toggleDescriptions() {
-      const hide = document.body.classList.toggle('hide-descriptions');
-      document.getElementById('opt-desc-show').classList.toggle('active', !hide);
-      document.getElementById('opt-desc-hide').classList.toggle('active', hide);
-    }
-
     function toggleTheme() {
       const dark = document.body.classList.toggle('dark');
       document.getElementById('opt-light').classList.toggle('active', !dark);
