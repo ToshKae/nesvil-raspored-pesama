@@ -54,9 +54,10 @@
     body.dark .title small { color: #666; }
 
     .theme-toggle-fixed {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 100;
     }
 
     /* Theme toggle */
@@ -426,7 +427,8 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 480px) {\n      .header { margin-bottom: 28px; }
+    @media (max-width: 480px) {
+      .header { margin-bottom: 28px; }
       .title { font-size: 1.4rem; }
       .container { padding-left: 12px; padding-right: 12px; }
       .time-col { width: 56px; }
