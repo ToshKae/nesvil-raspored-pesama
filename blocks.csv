@@ -1,17 +1,17 @@
-block,order_id,label,fixed_minutes,subtitle
+block,order_id,label,fixed_minutes,description
 duplikat,0,Duplikat,,
-starogradska,1,Starogradske pesme,,
+starogradska,1,Starogradske pesme,,Stara kafanska akustična muzika
 vencanje,2,Venčanje sa matičarem,15,Odvija se unutar sale i traje oko 15 min
-svilen_konac,2.5,Svilen konac,,Svilen konac instrumental i poziv na prvi ples
-prvi_ples,3,Prvi ples,,
-prelaz1,4,Prelaz 1 (balade),,
+svilen_konac,2.5,Slavlje vencanja,,Svilen konac instrumental, slavlje vencanja i poziv na prvi ples
+prvi_ples,3,Prvi ples,,Prva pesma ples mladenaca uz vatromet, druga pesma poziv na pridruživanje
+prelaz1,4,Prelaz 1 (balade),,Kratak blok balada pre brzog ritma
 turbofolk,5,Turbofolk,,
-pred_kolo,6,Pred kolo,,
-kolo,7,Kolo,,
-folk,8,Folk,,
-torta,9,Torta,,
-posle_torte,10,Posle torte I,,
-posle_torte2,11,Posle torte II,,
-folk2,12,Folk II,,
+pred_kolo,6,Pred kolo,,Narodna muzika pre kola
+kolo,7,Kolo,,Kratak blok popularnih srpskih kola
+folk,8,Folk,,Narodna muzika popularna
+torta,9,Torta,,Remix pesme pušten sa YouTube
+posle_torte,10,Posle torte I,,Pop/rock moderno
+prelaz2,11,Prelaz 2,,Kratak prelaz sa modernih pesama ponovo na narodne
+folk2,12,Folk II,,Starije narodne pesme
 pijani_kraj,13,Pijani kraj,,
 balade2,14,Balade II,,

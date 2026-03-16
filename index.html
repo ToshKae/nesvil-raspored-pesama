@@ -224,7 +224,7 @@
 
     body.dark .block-title { color: #f0f0f0; }
 
-    .block-subtitle {
+    .block-description {
       font-size: 0.75rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
@@ -233,7 +233,7 @@
       transition: color 0.3s ease;
     }
 
-    body.dark .block-subtitle { color: #666; }
+    body.dark .block-description { color: #666; }
 
     .songs {
       list-style: none;
@@ -392,7 +392,8 @@
         <div class="dot"></div>
         <div class="content">
           <span class="block-label">Doček gostiju</span>
-          <div class="block-title">Slikanje sa mladencima</div>
+          <div class="block-title">Doček gostiju</div>
+          <div class="block-description">Slikanje sa mladencima</div>
         </div>
       </div>
 
@@ -511,7 +512,7 @@
                 <div class="block-header-left">
                   <span class="block-label">${b.label}</span>
                   <div class="block-title">${b.label}</div>
-                  ${b.subtitle ? `<div class="block-subtitle">${b.subtitle}</div>` : ''}
+                  ${b.description ? `<div class="block-description">${b.description}</div>` : ''}
                 </div>
                 ${collapseBtn}
               </div>
