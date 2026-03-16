@@ -204,7 +204,7 @@
     .block-label {
       display: inline-block;
       align-self: flex-start;
-      width: min-content;
+      width: fit-content;
       font-size: 0.65rem;
       font-weight: 500;
       letter-spacing: 0.12em;
@@ -216,6 +216,8 @@
       color: #b8942a;
       transition: background 0.3s ease, color 0.3s ease;
     }
+
+    .block-label--wrap { width: min-content; }
 
     body.dark .block-label {
       background: rgba(212, 175, 55, 0.15);
@@ -593,7 +595,7 @@
             <div class="content">
               <div class="block-header">
                 <div class="block-header-top">
-                  <span class="block-label">${b.label}</span>
+                  <span class="block-label${b.block === 'ulaz_mladenaca' ? ' block-label--wrap' : ''}">${b.label}</span>
                   ${collapseBtn}
                 </div>
                 ${b.description ? `<div class="block-description">${b.description}</div>` : ''}
