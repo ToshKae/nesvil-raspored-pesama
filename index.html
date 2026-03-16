@@ -258,11 +258,25 @@
       background: #fff;
       border-radius: 8px;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-direction: column;
+      align-items: stretch;
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .song-author {
+      display: none;
+      font-size: 0.68rem;
+      color: #bbb;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      padding: 1px 0 2px 36px;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+    }
+
+    body.dark .song-author { color: #555; }
+    .songs-wrap.authors-visible .song-author { display: block; }
 
     body.dark .songs li {
       background: #1f1f1f;
@@ -557,12 +571,12 @@
 
         const innerHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
-              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
+              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a>${s.author_main ? `<div class="song-author">${s.author_main}</div>` : ''}</li>`
             ).join('') + '</ul>' + totalHTML
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
         const collapseBtn = list.length
-          ? `<button class="collapse-btn" onclick="toggleBlock(this)"><span class="opt active">Prikaži</span><span class="opt">Sakrij</span></button>`
+          ? `<button class="collapse-btn" onclick="toggleAuthors(this)"><span class="opt">Prikaži</span><span class="opt active">Sakrij</span></button>`
           : '';
 
         const delay = (idx * 0.1).toFixed(1);
@@ -631,6 +645,14 @@
             </div>
           </div>`;
       }
+    }
+
+    function toggleAuthors(btn) {
+      const wrap = btn.closest('.content').querySelector('.songs-wrap');
+      const visible = wrap.classList.toggle('authors-visible');
+      const opts = btn.querySelectorAll('.opt');
+      opts[0].classList.toggle('active', visible);
+      opts[1].classList.toggle('active', !visible);
     }
 
     function toggleBlock(btn) {
