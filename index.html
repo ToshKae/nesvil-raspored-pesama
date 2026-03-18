@@ -326,13 +326,11 @@
 
     .block.has-songs .content {
       padding-left: 18px;
-      background: #fdf6f0;
-      position: relative;
-      z-index: 1;
     }
 
-    body.dark .block.has-songs .content {
-      background: #141414;
+    .block.has-songs .songs-wrap {
+      margin-left: calc(-72px - 18px);
+      width: calc(100% + 72px + 18px);
     }
 
     .songs li .song-gender {
@@ -470,6 +468,11 @@
       .timeline::before { left: 56px; }
       .dot { left: 50px; }
       .content { padding-left: 22px; }
+      .block.has-songs .content { padding-left: 18px; }
+      .block.has-songs .songs-wrap {
+        margin-left: calc(-56px - 18px);
+        width: calc(100% + 56px + 18px);
+      }
     }
   </style>
 </head>
