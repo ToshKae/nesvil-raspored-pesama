@@ -324,17 +324,6 @@
 
     body.dark .songs li .song-dur { color: #444; }
 
-    .block.has-songs .content {
-      padding-left: 18px;
-      background: #fdf6f0;
-      position: relative;
-      z-index: 1;
-    }
-
-    body.dark .block.has-songs .content {
-      background: #141414;
-    }
-
     .songs li .song-gender {
       font-size: 0.88rem;
       flex-shrink: 0;
@@ -607,7 +596,7 @@
         const delay = (idx * 0.1).toFixed(1);
 
         return `
-          <div class="block${list.length ? ' has-songs' : ''}" style="animation-delay:${delay}s">
+          <div class="block" style="animation-delay:${delay}s">
             <div class="time-col">
               <div class="time">${startTime}</div>
               <div class="duration">${totalMins ? totalMins + ' min' : '—'}</div>
