@@ -705,12 +705,18 @@
     }
 
     function toggleAllAuthors(btn) {
+      const anchor = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2);
+      const anchorTop = anchor ? anchor.getBoundingClientRect().top : 0;
+
       const wraps = document.querySelectorAll('.songs-wrap');
       const anyVisible = [...wraps].some(w => w.classList.contains('authors-visible'));
       wraps.forEach(w => w.classList.toggle('authors-visible', !anyVisible));
+
       const opts = btn.querySelectorAll('.opt');
       opts[0].classList.toggle('active', anyVisible);
       opts[1].classList.toggle('active', !anyVisible);
+
+      if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - anchorTop);
     }
 
     function toggleBlock(btn) {
