@@ -44,7 +44,7 @@
       font-weight: 600;
       color: #1a1a1a;
       letter-spacing: 0.08em;
-      margin-bottom: 4px;
+      margin: 0;
       transition: color 0.3s ease;
     }
 
@@ -52,8 +52,49 @@
     .title span { color: #d4af37; }
     .title small { font-size: 0.55em; color: #aaa; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 0.04em; }
     body.dark .title small { color: #666; }
+    .title-date { font-size: 0.55em; color: #aaa; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 0.04em; }
+    body.dark .title-date { color: #666; }
+    .title-subtitle { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 300; color: #aaa; letter-spacing: 0.06em; margin: 6px 0 0; }
+    body.dark .title-subtitle { color: #555; }
 
     .theme-toggle-fixed {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 100;
+    }
+
+    .theme-toggle-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .theme-hint {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #aaa;
+      letter-spacing: 0.05em;
+    }
+
+    body.dark .theme-hint { color: #666; }
+
+    .header-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .theme-toggle-inline {
+      display: inline-flex;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    .left-toggle-fixed {
       position: fixed;
       top: 16px;
       right: 16px;
@@ -463,14 +504,18 @@
   </style>
 </head>
 <body>
-  <button class="theme-toggle theme-toggle-fixed" onclick="toggleTheme()">
-    <span class="opt active" id="opt-light">Svetla</span>
-    <span class="opt" id="opt-dark">Tamna</span>
+  <button class="theme-toggle left-toggle-fixed" onclick="toggleAllAuthors(this)">
+    <span class="opt">Prikaži izvođače</span>
+    <span class="opt active">Sakrij</span>
   </button>
   <div class="container" style="position:relative;">
 
     <header class="header">
-      <h1 class="title">Raspored <span>pesama</span> <small>(31.05.2026.)</small></h1>
+      <div class="header-row">
+        <h1 class="title">Raspored <span>pesama</span></h1>
+        <button class="theme-toggle theme-toggle-inline" onclick="toggleTheme()"><span class="opt active" id="opt-light">Svetla</span><span class="opt" id="opt-dark">Tamna</span></button>
+      </div>
+      <p class="title-subtitle">Svečana sala Nešvil — zakazana za 31.05.2026.</p>
     </header>
 
 
@@ -589,9 +634,7 @@
             ).join('') + '</ul>' + totalHTML
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
-        const collapseBtn = list.length
-          ? `<button class="collapse-btn" onclick="toggleAuthors(this)"><span class="opt">Prikaži autore</span><span class="opt active">Sakrij</span></button>`
-          : '';
+        const collapseBtn = '';
 
         const delay = (idx * 0.1).toFixed(1);
 
@@ -661,12 +704,13 @@
       }
     }
 
-    function toggleAuthors(btn) {
-      const wrap = btn.closest('.content').querySelector('.songs-wrap');
-      const visible = wrap.classList.toggle('authors-visible');
+    function toggleAllAuthors(btn) {
+      const wraps = document.querySelectorAll('.songs-wrap');
+      const anyVisible = [...wraps].some(w => w.classList.contains('authors-visible'));
+      wraps.forEach(w => w.classList.toggle('authors-visible', !anyVisible));
       const opts = btn.querySelectorAll('.opt');
-      opts[0].classList.toggle('active', visible);
-      opts[1].classList.toggle('active', !visible);
+      opts[0].classList.toggle('active', anyVisible);
+      opts[1].classList.toggle('active', !anyVisible);
     }
 
     function toggleBlock(btn) {
