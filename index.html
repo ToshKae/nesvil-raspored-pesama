@@ -681,7 +681,7 @@
       const skipSongs = songs.filter(s => s.block === 'skip');
       if (skipSongs.length) {
         const skipList = '<ul class="songs">' + skipSongs.map((s, i) =>
-          `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a></li>`
+          `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}</a>${s.author_main ? `<div class="song-author">${s.author_main}</div>` : ''}</li>`
         ).join('') + '</ul>';
         timeline.innerHTML += `
           <div class="block skip-block" style="animation-delay:${(sorted.length * 0.1).toFixed(1)}s">
