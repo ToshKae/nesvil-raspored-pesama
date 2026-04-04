@@ -630,7 +630,7 @@
 
         const innerHTML = list.length
           ? '<ul class="songs">' + list.map((s, i) =>
-              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}${genderEmoji(s.gender) ? `<span class="song-gender">${genderEmoji(s.gender)}</span>` : ''}</a>${s.author_main ? `<div class="song-author">${s.author_main}</div>` : ''}</li>`
+              `<li><a href="https://www.youtube.com/watch?v=${s.id}" target="_blank" rel="noopener"><span class="num">${s.flag === 'optional' ? '(' + (i + 1) + ')' : i + 1}</span><span class="play-icon">▶</span>${s.title}${s.duration ? `<span class="song-dur">${s.duration}</span>` : ''}${genderEmoji(s.gender) ? `<span class="song-gender">${genderEmoji(s.gender)}</span>` : ''}</a>${s.author_main ? `<div class="song-author">${s.author_main}</div>` : ''}</li>`
             ).join('') + '</ul>' + totalHTML
           : `<p class="no-songs">${b.fixed_minutes ? formatTotal(+b.fixed_minutes * 60) : 'Pesme — placeholder'}</p>`;
 
