@@ -1,5 +1,4 @@
 block,order_id,label,fixed_minutes,description
-duplikat,0,Duplikat,,
 ulaz_mladenaca,0.5,Ulaz mladenaca,,Svečani ulaz mladenaca uz pratnju pesme
 starogradska,1,Kafanska,,Stara kafanska akustična muzika
 vencanje,2,Venčanje sa matičarem,15,Odvija se unutar sale i traje oko 15 min
@@ -15,4 +14,3 @@ posle_torte,10,Posle torte,,Pop/rock moderno
 prelaz2,11,Prelaz 2,,Kratak prelaz sa modernih pesama ponovo na brze narodne
 turbofolk,12,Turbofolk,,Posle sedme dedine rakije
 pijani_kraj,13,Pijani kraj,,Spore i emotivne
-balade2,14,Balade II,,
