@@ -1,6 +1,6 @@
 id,title,flag,duration,block,author_main,gender
 i6JLs7KE0sc,Hvala ti za ljubav,mandatory,2:51,ulaz_mladenaca,Saban Saulic,m
-9D7GkUC3dM4,Makedonsko devojče,mandatory,3:45,starogradska,Nenad Milevski,m
+n25Cm9skPfY,Makedonsko devojče,mandatory,3:00,starogradska,Nenad Milevski,m
 GBnVOIlR4RE,Jovano jovanke,mandatory,3:33,starogradska,Nenad Milevski,m
 GgPKa60T388,Ja te pjesmom zovem,mandatory,4:10,starogradska,Hanka Paldum,f
 _2Raxs-3Jvo,Volim da te volim,mandatory,4:42,starogradska,Radoslav Rodic Roki,m
@@ -48,15 +48,15 @@ q4jrC1Gpq4A,A tebe nema,optional,4:54,folk,Zorica Brunclik,f
 y9-4_6Tadik,Opet imam razloga da živim,optional,3:14,folk,Ana Bekuta,f
 jTRrbMCce2g,Tvoje oči plave,mandatory,3:22,folk,Ferid Avdic,m
 1kKDiTBeBtA,Ti pripadaš samo meni,mandatory,3:11,folk,Jasar Ahmedovski,m
-q3k5S84jnxE,S namerom dodjoh u veliki grad,optional,4:25,folk,Saban Saulic,m
+q3k5S84jnxE,S namerom dodjoh u veliki grad,backlog,4:25,folk,Saban Saulic,m
 63aVTXx73mY,Kraljice srce moga,mandatory,3:08,folk,Saban Saulic,m
 zbCmNcg8kIo,Ej od kad sam se rodio,mandatory,3:37,turbofolk,Sinan Sakic,m
 YjfO1GYkrM4,Kafanac,mandatory,3:00,folk,Saban Saulic,m
 Wgv_H8sLsjw,Dodji da ostarimo zajedno,backlog,6:21,folk,Saban Saulic,m
 aNw-0B1_mtI,Ugasila si me,optional,4:06,pijani_kraj,Nenad Milevski,m
 x9Dhjof1-cA,Crne kose,mandatory,3:28,pijani_kraj,Hanka Paldum,f
-m06f866RucU,Čaršija,optional,4:06,pijani_kraj,Al Dino,m
-_kFJflibthg,Romanija,mandatory,4:29,pijani_kraj,Halid Bešlić,m
+ZnSJhDTthCw,Mećava,optional,3:14,pijani_kraj,Nenad Milevski,m
+34QsJaDyly8,Romanija,mandatory,4:29,pijani_kraj,Nenad Milevski,m
 mUW55VStPsI,Sećaš li se kad smo klinci bili,mandatory,4:37,folk,Milance Radosavljevic,m
 s8DBMai7-W4,Ja još spavam u tvojoj majici,mandatory,3:40,veselje,Ceca,f
 Z1PHKbBxs5Y,Luda za tobom,mandatory,3:16,veselje,Lepa Brena,f
@@ -66,7 +66,7 @@ hlluayds-EI,Dani su bez broja,backlog,4:04,posle_torte,Magazin Ft. Esma Redzepov
 hSn7-MFHF7c,Ružo rumena,mandatory,3:09,pijani_kraj,Nenad Milevski,m
 tHlJAPa55E0,Ponoć (Film Toma),backlog,3:19,pijani_kraj,Aco Pejovic I Suzana Brankovic,duo
 r0rf85FoVJI,9000 metara,mandatory,3:28,posle_torte,Željko Samardžić,m
--PSsZcG42io,Slavija,optional,4:00,prelaz2,Dzej,duo
+yj4Di3EFg1Q,Slavija,mandatory,3:28,prelaz2,Nenad Milevski,duo
 N8Ofb03-zEs,Lopov,mandatory,3:26,prelaz2,Indira,duo
 UyjOlX3gQEY,Oficir s ružom,mandatory,4:09,prelaz2,Nedeljko Bajić Baja,m
 JtO-8qS2G98,Budi uvijek sretna,mandatory,3:44,folk,Halid Beslic,m
@@ -88,17 +88,17 @@ Dy-BZGeVU00,Crveni lak,backlog,3:12,veselje,Sanja Dordjevic,f
 DCxQPUE-7ro,Kolo ljubavi,mandatory,3:47,prelaz2,Louis,m
 2qR5bbGyUpk,Opa opa,optional,3:38,prelaz2,Luis,m
 Di7qSUe4muk,Kada bi me pitali,mandatory,3:02,folk,Zorica Brunclik,f
-G048KKelEEk,Jesen u mom sokaku,mandatory,4:05,folk,Predrag Tozovac,m
+MSZ6L8Y-tek,Jesen u mom sokaku,mandatory,4:05,folk,Nenad Milevski,m
 oJ7I9TQaeS0,Oči jedne žene,mandatory,4:33,folk,Predrag Tozovac,m
 yg3h62Svgqk,Prava ljubav godine ne broji,backlog,4:13,posle_torte,Željko Samardžić,m
 d6BNMgoZezM,Božanstvena ženo,optional,3:46,folk,Miroslav Ilić,m
 4Oz8oKgkTe8,Sve je moje tvoje,optional,3:54,posle_torte,Zeljko Samardzic,m
 PoTB5wu7H_o,Med i slatko grozdje,backlog,3:32,pijani_kraj,Nikola Rokvic,m
 VJvLDirJp9g,Još te nešto čini izuzetnom,mandatory,3:38,folk,Miroslav Ilić,m
+LUtXQSSS1q4,Svirajte noćas samo za nju,optional,3:56,folk,Nenad Milevski,m
 gfAr9Se97Ow,Za Ljiljanu,mandatory,4:42,folk,Toma Zdravković,m
 QMsgGZpJ54Y,Kafana je moja istina,mandatory,3:34,folk,Toma Zdravković,m
-Sa-yQtOUdmM,Slike u oku,mandatory,3:56,folk,Nenad Milevski & Narodni Orkestar Rts,m
-cynegi30EW4,Svirajte noćas samo za nju,backlog,3:56,folk,Toma Zdravković,m
+Sa-yQtOUdmM,Slike u oku,mandatory,3:56,folk,Nenad Milevski,m
 mZ-FKcyJIQo,Dančе,backlog,3:29,folk,Predrag Zivkovic Tozovac,m
 CV7VmE6mwTw,Zbog tebe sam vino pio,optional,3:16,folk,Serif Konjevic,m
 5q9pY_2Gp30,Potopiću ovaj splav,mandatory,3:29,turbofolk,Stoja,f
@@ -137,3 +137,4 @@ fPXJDOWMk9I,Ja stalno pijem,optional,3:39,turbofolk,Djani,m
 ZT7ruP-Tzqk,Lepa do bola,backlog,3:56,turbofolk,Sinan Sakic,m
 HS7eJEUYtyU,Kad zamirišu jorgovani,mandatory,3:36,posle_torte,Vesna Zmijanac & Dino Merlin,duo
 sTcHTM1njeU,Zlatiborske zore,backlog,3:03,veselje,Ana Bekuta,f
+m06f866RucU,Čaršija,backlog,4:06,pijani_kraj,Al Dino,m
