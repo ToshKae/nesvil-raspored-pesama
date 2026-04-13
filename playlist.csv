@@ -10,7 +10,7 @@ x-e4dfAnORk,Luckasta si ti,optional,3:28,starogradska,Miroslav Ilic,m
 zhgpLHjPe24,Moja mala nema mane,optional,3:30,starogradska,Zvonko Bogdan,m
 ygAXxdeGr3M,"Ej, Branka, Branka",mandatory,3:45,starogradska,Toma Zdravkovic,m
 EK9gk-OCP88,Ti meni lažeš sve,mandatory,4:00,starogradska,Nenad Milevski,m
-b2_hKiDoXXY,Svilen konac (Instrumental),mandatory,3:32,svilen_konac,Aleksandar Šišić,inst
+b2_hKiDoXXY,Svilen konac (Instrumental),mandatory,3:32,pauza_muzike,Aleksandar Šišić,mp3
 iW5FA-ituzQ,Prodji sa mnom ispod duge,mandatory,3:11,prvi_ples,Bojana Barjaktarevic,f
 qrhnxvGteC8,Trebaš mi,mandatory,3:59,prvi_ples,Darko Filipovic,m
 rtbWT5HPJTk,Imati pa nemati,mandatory,4:23,prelaz1,Nenad Milevski,m
@@ -45,7 +45,7 @@ L-oP3NbHpB4,Dao bih ovo malo života,mandatory,4:20,folk,Nenad Milevski,m
 BeOsEkb2Q6c,Mali gospodin,mandatory,2:57,folk,Nada Topcagic,f
 DWyTEYek6sM,Koliba kraj puta,mandatory,3:25,folk,Gordana Lazarevic,f
 Of0lq4Xtd1Y,Momak veseljak,mandatory,4:35,folk,Marinko Rokvic,m
-R1UbFPHHV_A,Ti si žena koju ludo volim,optional,4:06,folk,Savo Radusinovic,m
+R1UbFPHHV_A,Ti si žena koju ludo volim,mandatory,4:06,folk,Savo Radusinovic,m
 pfknDbO-nUo,Jutro je,mandatory,3:57,folk,Nada Topcagic,f
 q4jrC1Gpq4A,A tebe nema,backlog,4:54,folk,Zorica Brunclik,f
 y9-4_6Tadik,Opet imam razloga da živim,backlog,3:14,folk,Ana Bekuta,f
@@ -60,9 +60,9 @@ YjfO1GYkrM4,Kafanac,mandatory,3:00,folk,Saban Saulic,m
 Wgv_H8sLsjw,Dodji da ostarimo zajedno,backlog,6:21,folk,Saban Saulic,m
 tUeCp7uPnfE,Zlatnik,optional,3:41,pijani_kraj,Tanja Savic,f
 aNw-0B1_mtI,Ugasila si me,optional,4:06,pijani_kraj,Nenad Milevski,m
-ZnSJhDTthCw,Mećava,optional,3:14,pijani_kraj,Nenad Milevski,m
+ZnSJhDTthCw,Mećava,mandatory,3:14,pijani_kraj,Nenad Milevski,m
 XnJ-5ncigqo,Sećaš li se one noći,mandatory,3:56,pijani_kraj,Ipče Ahmedovski,m
-34QsJaDyly8,Romanija,mandatory,4:29,pijani_kraj,Nenad Milevski,m
+34QsJaDyly8,Romanija,optional,4:29,pijani_kraj,Nenad Milevski,m
 CV7VmE6mwTw,Zbog tebe sam vino pio,optional,3:16,folk,Serif Konjevic,m
 mUW55VStPsI,Sećaš li se kad smo klinci bili,optional,4:37,folk,Milance Radosavljevic,m
 s8DBMai7-W4,Ja još spavam u tvojoj majici,mandatory,3:40,veselje,Ceca,f
@@ -74,7 +74,7 @@ hSn7-MFHF7c,Ružo rumena,mandatory,3:09,pijani_kraj,Nenad Milevski,m
 tHlJAPa55E0,Ponoć (Film Toma),backlog,3:19,pijani_kraj,Aco Pejovic I Suzana Brankovic,duo
 r0rf85FoVJI,9000 metara,mandatory,3:28,posle_torte,Željko Samardžić,m
 yj4Di3EFg1Q,Slavija,mandatory,3:28,prelaz2,Nenad Milevski,duo
-N8Ofb03-zEs,Lopov,mandatory,3:26,prelaz2,Indira,duo
+N8Ofb03-zEs,Lopov,backlog,3:26,prelaz2,Indira,duo
 UyjOlX3gQEY,Oficir s ružom,mandatory,4:09,prelaz2,Nedeljko Bajić Baja,m
 JtO-8qS2G98,Budi uvijek sretna,mandatory,3:44,folk,Halid Beslic,m
 kcNPzW9vhHM,Danka,mandatory,2:47,pijani_kraj,Toma Zdravković,m
@@ -85,14 +85,14 @@ skchtk-GJn0,Nije ljubav fotografija,mandatory,3:50,prelaz1,Sasa Matic,m
 Qdi1rr-la6Q,Isti igraci,mandatory,3:34,veselje,Goran Vukosic I Mina Kostic,duo
 vTW7_cg10ws,Nevera moja,backlog,3:10,veselje,Vesna Zmijanac,f
 rvXQEMcoQiA,Crna ruža,mandatory,3:48,folk,Halid Beslic,m
-rcqevcKahas,I zanesen tom lepotom,mandatory,3:36,folk,Halid Beslic,m
+rcqevcKahas,I zanesen tom lepotom,optional,3:36,folk,Halid Beslic,m
 iTYwhD09IU4,Nesanica,backlog,3:19,pijani_kraj,Nikola Kojo,m
-j8IgRoNanjw,O djila,mandatory,3:35,starogradska,Haris Dzinovic,m
+j8IgRoNanjw,O djila,optional,3:35,starogradska,Haris Dzinovic,m
 QoqlO72ORw8,Sta ce ti pevacica,backlog,2:36,turbofolk,Jana,f
 EdShTsW0NmE,Crna golubice,backlog,3:27,veselje,Slaviša Vujić,m
 hT3eUUfR6Wk,Ivana,backlog,3:26,veselje,Medeni Mesec,m
 f163HVZPKe8,Pola vino pola voda,optional,3:21,veselje,Bane Bojanic,m
-vO9pgvv7qgg,Medena,optional,3:58,veselje,Medenjaci,m
+vO9pgvv7qgg,Medena,mandatory,3:58,veselje,Medenjaci,m
 Dy-BZGeVU00,Crveni lak,backlog,3:12,veselje,Sanja Dordjevic,f
 DCxQPUE-7ro,Kolo ljubavi,mandatory,3:47,prelaz2,Louis,m
 2qR5bbGyUpk,Opa opa,backlog,3:38,prelaz2,Luis,m
@@ -147,3 +147,9 @@ HS7eJEUYtyU,Kad zamirišu jorgovani,mandatory,3:36,posle_torte,Vesna Zmijanac & 
 sTcHTM1njeU,Zlatiborske zore,backlog,3:03,veselje,Ana Bekuta,f
 -gl45fwodMY,Mi se volimo,optional,3:06,veselje,Semsa Suljakovic I Juzni Vetar,duo
 m06f866RucU,Čaršija,backlog,4:06,pijani_kraj,Al Dino,m
+gefp9ta8LTA,Makedonsko devojče (instrumental),optional,3:29,pauza_muzike,Camie Florien,mp3
+17L7R6uoAMw,Ajde jano (instrumental),optional,3:24,pauza_muzike,Marko Ristic,mp3
+BgQMU3gIIJ8,Veseli se kucni domacine (instrumental),backlog,2:57,pauza_muzike,Ivan Zivkovic,mp3
+sApt87Ox1pQ,Moj dilbere (instrumental),backlog,1:46,pauza_muzike,Radojka Živković,mp3
+ATPjDH3js6k,Cudna jada (instrumental),backlog,2:59,pauza_muzike,Marko Ristic,mp3
+AXunlAFNEzU,Odlazis odlazis (instrumental),optional,3:28,pauza_muzike,Senad Hodzic,mp3
