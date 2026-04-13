@@ -1,8 +1,9 @@
 id,title,flag,duration,block,author_main,gender
 i6JLs7KE0sc,Hvala ti za ljubav,mandatory,2:51,ulaz_mladenaca,Saban Saulic,m
-n25Cm9skPfY,Makedonsko devojče,mandatory,3:00,starogradska,Nenad Milevski,m
+n25Cm9skPfY,Makedonsko devojče,backlog,3:00,starogradska,Nenad Milevski,m
 GBnVOIlR4RE,Jovano jovanke,mandatory,3:33,starogradska,Nenad Milevski,m
 GgPKa60T388,Ja te pjesmom zovem,mandatory,4:10,starogradska,Hanka Paldum,f
+x9Dhjof1-cA,Crne kose,mandatory,3:28,starogradska,Hanka Paldum,f
 _2Raxs-3Jvo,Volim da te volim,mandatory,4:42,starogradska,Radoslav Rodic Roki,m
 34j8intgGqk,Neznanka,mandatory,3:23,starogradska,Radisa Markovic,m
 x-e4dfAnORk,Luckasta si ti,optional,3:28,starogradska,Miroslav Ilic,m
@@ -20,12 +21,13 @@ eWVnVlZ71vo,Meni trebaš ti,mandatory,3:25,posle_torte,Oliver Dragojević,m
 oWjhEfwS-Zs,Merak mi je,mandatory,4:34,posle_torte,Zdravko Colic,m
 6UmG7L7QuUM,Tri u jednoj,mandatory,3:44,prelaz1,Marinko Rokvic,m
 f46LkPDypSY,Ne može nam niko ništa,optional,3:37,turbofolk,Mitar Miric,m
-EpajgooyuSY,Pristajem na sve,mandatory,4:12,turbofolk,Semsa Suljakovic I Juzni Vetar,f
-jphNlN8TDaw,Tri života srca tri,mandatory,2:48,turbofolk,Nada Topcagic,f
 0ZrFjmFjPj8,Sunce moje,mandatory,3:32,turbofolk,Sinan Sakic,m
-TskYcRu1JVw,Da li si me voljela il nisi,mandatory,3:35,veselje,Sejo Kalac,m
+sT3kZ6JcwCE,Radjaj sinove,backlog,3:20,veselje,Dzej,m
 wwLKUZZEEMg,Usne vrele kao žar,mandatory,2:52,veselje,Nino,m
-sT3kZ6JcwCE,Radjaj sinove,optional,3:20,veselje,Dzej,m
+GfaEukWScfY,Pitaju me u mom kraju,mandatory,2:57,veselje,Dragana Mirkovic,f
+VTEHyFQfI4c,Zaboravi broj,mandatory,3:39,veselje,Natasa Djordjevic,f
+jphNlN8TDaw,Tri života srca tri,mandatory,2:48,veselje,Nada Topcagic,f
+TskYcRu1JVw,Da li si me voljela il nisi,backlog,3:35,veselje,Sejo Kalac,m
 Ti9JMqTes5Q,Neodoljiv neumoljiv,mandatory,2:46,veselje,Ceca,f
 YQUgUDDWogA,Popij me kao lek,mandatory,3:33,veselje,Ceca,f
 vcGEKEoIOF0,Volim te,mandatory,4:07,veselje,Ceca,f
@@ -39,7 +41,7 @@ Tm-X7TWEemM,Alaj mi je večeras po volji,mandatory,2:57,folk,Jasna Đokić,f
 L-oP3NbHpB4,Dao bih ovo malo života,mandatory,4:20,folk,Nenad Milevski,m
 2f-JBKQguaY,Što je lepo kad se neko voli,mandatory,4:07,folk,Merima Njegomir,f
 4WpOJ0RUyC0,Ivanova korita,mandatory,3:20,folk,Merima Njegomir,f
-2QLllufPXe8,Oj djevojko Milijana,mandatory,2:32,folk,Beki Bekic,m
+2QLllufPXe8,Oj djevojko Milijana,backlog,2:32,folk,Beki Bekic,m
 BeOsEkb2Q6c,Mali gospodin,mandatory,2:57,folk,Nada Topcagic,f
 DWyTEYek6sM,Koliba kraj puta,mandatory,3:25,folk,Gordana Lazarevic,f
 Of0lq4Xtd1Y,Momak veseljak,mandatory,4:35,folk,Marinko Rokvic,m
@@ -53,11 +55,12 @@ q3k5S84jnxE,S namerom dodjoh u veliki grad,backlog,4:25,folk,Saban Saulic,m
 63aVTXx73mY,Kraljice srce moga,mandatory,3:08,folk,Saban Saulic,m
 velxP2aEe5s,Pruži ruku pomirenja,mandatory,3:36,folk,Saban Saulic,m
 zbCmNcg8kIo,Ej od kad sam se rodio,mandatory,3:37,turbofolk,Sinan Sakic,m
+Jnhqes1Iv2s,Trezan,optional,3:16,turbofolk,Sinan Sakic,m
 YjfO1GYkrM4,Kafanac,mandatory,3:00,folk,Saban Saulic,m
 Wgv_H8sLsjw,Dodji da ostarimo zajedno,backlog,6:21,folk,Saban Saulic,m
+tUeCp7uPnfE,Zlatnik,optional,3:41,pijani_kraj,Tanja Savic,f
 aNw-0B1_mtI,Ugasila si me,optional,4:06,pijani_kraj,Nenad Milevski,m
 ZnSJhDTthCw,Mećava,optional,3:14,pijani_kraj,Nenad Milevski,m
-x9Dhjof1-cA,Crne kose,mandatory,3:28,pijani_kraj,Hanka Paldum,f
 XnJ-5ncigqo,Sećaš li se one noći,mandatory,3:56,pijani_kraj,Ipče Ahmedovski,m
 34QsJaDyly8,Romanija,mandatory,4:29,pijani_kraj,Nenad Milevski,m
 CV7VmE6mwTw,Zbog tebe sam vino pio,optional,3:16,folk,Serif Konjevic,m
@@ -78,8 +81,8 @@ kcNPzW9vhHM,Danka,mandatory,2:47,pijani_kraj,Toma Zdravković,m
 BHFWk7DoWp0,Ptico moja beli labude,mandatory,4:22,pijani_kraj,Baja Mali Knindža,m
 skchtk-GJn0,Nije ljubav fotografija,mandatory,3:50,prelaz1,Sasa Matic,m
 1yM4tyZD3hs,Miki mićo,mandatory,3:11,veselje,Lepa Brena,f
-3iTryOWivIQ,"Nije vetar, nije kisa",mandatory,3:18,veselje,Elma,f
-rFBnhvaZnaA,Pitaju me u mom kraju,mandatory,2:53,veselje,Dragana Mirkovic,f
+3iTryOWivIQ,"Nije vetar, nije kisa",backlog,3:18,veselje,Elma,f
+Qdi1rr-la6Q,Isti igraci,mandatory,3:34,veselje,Goran Vukosic I Mina Kostic,duo
 vTW7_cg10ws,Nevera moja,backlog,3:10,veselje,Vesna Zmijanac,f
 rvXQEMcoQiA,Crna ruža,mandatory,3:48,folk,Halid Beslic,m
 rcqevcKahas,I zanesen tom lepotom,mandatory,3:36,folk,Halid Beslic,m
@@ -87,13 +90,15 @@ iTYwhD09IU4,Nesanica,backlog,3:19,pijani_kraj,Nikola Kojo,m
 j8IgRoNanjw,O djila,mandatory,3:35,starogradska,Haris Dzinovic,m
 QoqlO72ORw8,Sta ce ti pevacica,backlog,2:36,turbofolk,Jana,f
 EdShTsW0NmE,Crna golubice,backlog,3:27,veselje,Slaviša Vujić,m
-hT3eUUfR6Wk,Ivana,optional,3:26,veselje,Medeni Mesec,m
+hT3eUUfR6Wk,Ivana,backlog,3:26,veselje,Medeni Mesec,m
 f163HVZPKe8,Pola vino pola voda,optional,3:21,veselje,Bane Bojanic,m
+vO9pgvv7qgg,Medena,optional,3:58,veselje,Medenjaci,m
 Dy-BZGeVU00,Crveni lak,backlog,3:12,veselje,Sanja Dordjevic,f
 DCxQPUE-7ro,Kolo ljubavi,mandatory,3:47,prelaz2,Louis,m
 2qR5bbGyUpk,Opa opa,backlog,3:38,prelaz2,Luis,m
 Di7qSUe4muk,Kada bi me pitali,mandatory,3:02,folk,Zorica Brunclik,f
 xTvy6znWRJQ,Sto ću čuda učiniti,mandatory,3:23,folk,Dragana Mirkovic,f
+EpajgooyuSY,Pristajem na sve,mandatory,4:12,folk,Semsa Suljakovic I Juzni Vetar,f
 mSZ6L8Y-tek,Jesen u mom sokaku,mandatory,4:05,folk,Nenad Milevski,m
 oJ7I9TQaeS0,Oči jedne žene,mandatory,4:33,folk,Predrag Tozovac,m
 yg3h62Svgqk,Prava ljubav godine ne broji,backlog,4:13,posle_torte,Željko Samardžić,m
@@ -134,6 +139,7 @@ qDHNUiXh4sA,Polomicu case od kristala,backlog,3:20,folk,Miroslav Ilić,m
 M5TgIzY0E3s,Sama,backlog,3:18,veselje,Dragana Mirkovic,f
 CjLGVzn_yfA,Nešto mi govori,mandatory,3:40,turbofolk,Stoja,f
 C8t5zxVhE18,Sam sam,mandatory,3:24,turbofolk,Djani,m
+3wnb054c5l0,Sve mi tvoje nedostaje,optional,3:49,turbofolk,Djani,m
 fPXJDOWMk9I,Ja stalno pijem,backlog,3:39,turbofolk,Djani,m
 0FEq52oQsNo,Srpkinja je mene majka rodila,mandatory,4:04,turbofolk,Indira Radić,f
 ZT7ruP-Tzqk,Lepa do bola,backlog,3:56,turbofolk,Sinan Sakic,m
