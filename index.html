@@ -56,6 +56,10 @@
     body.dark .title-date { color: #666; }
     .title-subtitle { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 300; color: #aaa; letter-spacing: 0.06em; margin: 6px 0 0; }
     body.dark .title-subtitle { color: #555; }
+    .full-program-link { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500; color: #b8942a; letter-spacing: 0.06em; margin-top: 10px; text-decoration: none; border-bottom: 1px solid rgba(212,175,55,0.4); padding-bottom: 1px; transition: color 0.2s ease, border-color 0.2s ease; }
+    .full-program-link:hover { color: #d4af37; border-color: #d4af37; }
+    body.dark .full-program-link { color: #c9a432; border-bottom-color: rgba(212,175,55,0.25); }
+    body.dark .full-program-link:hover { color: #d4af37; border-color: #d4af37; }
 
     .theme-toggle-fixed {
       position: fixed;
@@ -519,7 +523,7 @@
         <h1 class="title">Raspored <span>pesama</span></h1>
         <button class="theme-toggle theme-toggle-inline" onclick="toggleTheme()"><span class="opt active" id="opt-light">Svetla</span><span class="opt" id="opt-dark">Tamna</span></button>
       </div>
-      <p class="title-subtitle">Svečana sala Nešvil — zakazana za 31.05.2026.</p>
+      <a class="full-program-link" href="https://toshkae.github.io/nesvil-svecana-sala/#timeline" target="_blank" rel="noopener">Klikni ovde za ceo program večeri — 31.05.2026. ↗</a>
     </header>
 
 
