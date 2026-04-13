@@ -755,7 +755,9 @@
     }
 
     function placeCurrentTimeMarker(blocks, songs) {
-      const _now = new Date(); const NOW = _now.getHours() * 60 + _now.getMinutes();
+      const _now = new Date();
+      const NOW_SECS = _now.getHours() * 3600 + _now.getMinutes() * 60 + _now.getSeconds();
+      const NOW = Math.floor(NOW_SECS / 60);
       if (NOW < 16 * 60 + 23 || NOW >= 22 * 60 + 55) return;
 
       const byBlock = {};
@@ -794,15 +796,15 @@
       const blockSongs = byBlock[activeBlock] || [];
       if (!blockSongs.length) return;
 
-      let songCursor = activeStart;
+      let songCursorSecs = activeStart * 60;
       let activeSongId = blockSongs[0].id; // default to first
       for (const s of blockSongs) {
-        const dur = Math.ceil(parseDuration(s.duration) / 60);
-        if (NOW >= songCursor && NOW < songCursor + dur) {
+        const dur = parseDuration(s.duration); // raw seconds, no rounding
+        if (NOW_SECS >= songCursorSecs && NOW_SECS < songCursorSecs + dur) {
           activeSongId = s.id;
           break;
         }
-        songCursor += dur;
+        songCursorSecs += dur;
       }
 
       const songLink = document.querySelector(`a[href*="${activeSongId}"]`);
@@ -816,7 +818,10 @@
       const top = liRect.top - tlTop + liRect.height / 2;
 
       const marker = document.createElement('div');
-      marker.style.cssText = `position:absolute;left:40px;width:calc(9.4% + 22px);top:${top}px;height:1px;background:#d4af37;opacity:0.6;z-index:10;transform:translateY(-50%);pointer-events:none;`;
+      marker.style.cssText = `position:absolute;left:40px;width:calc(8% + 4px);top:${top}px;height:1px;background:#d4af37;opacity:0.6;z-index:10;transform:translateY(-50%);pointer-events:none;`;
+      const arrow = document.createElement('div');
+      arrow.style.cssText = `position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid #d4af37;opacity:0.6;`;
+      marker.appendChild(arrow);
       timelineEl.appendChild(marker);
     }
 
