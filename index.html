@@ -749,12 +749,86 @@
       opts[1].classList.toggle('active', collapsed);
     }
 
+    function timeToMins(hhmm) {
+      const [h, m] = hhmm.split(':').map(Number);
+      return h * 60 + m;
+    }
+
+    function placeCurrentTimeMarker(blocks, songs) {
+      const _now = new Date(); const NOW = _now.getHours() * 60 + _now.getMinutes();
+      if (NOW < 16 * 60 + 23 || NOW >= 22 * 60 + 55) return;
+
+      const byBlock = {};
+      songs.forEach(s => {
+        if (!s.block || s.flag === 'backlog') return;
+        if (!byBlock[s.block]) byBlock[s.block] = [];
+        byBlock[s.block].push(s);
+      });
+
+      // Read actual block start times from DOM (already calculated by buildTimeline)
+      const sortedBlocks = blocks.slice().sort((a, b) => +a.order_id - +b.order_id);
+      const blockEls = [...document.querySelectorAll('#timeline .block')];
+
+      const domBlocks = [];
+      blockEls.forEach((el, idx) => {
+        const timeEl = el.querySelector('.time');
+        if (!timeEl || idx >= sortedBlocks.length) return;
+        const m = timeEl.textContent.trim().match(/^(\d{2}):(\d{2})$/);
+        if (!m) return;
+        domBlocks.push({ startMins: +m[1] * 60 + +m[2], block: sortedBlocks[idx].block });
+      });
+
+      // Find which block is active at NOW
+      let activeBlock = null, activeStart = 0;
+      for (let i = 0; i < domBlocks.length; i++) {
+        const next = domBlocks[i + 1];
+        if (domBlocks[i].startMins <= NOW && (!next || next.startMins > NOW)) {
+          activeBlock = domBlocks[i].block;
+          activeStart = domBlocks[i].startMins;
+          break;
+        }
+      }
+      if (!activeBlock) return;
+
+      // Find which song within that block is playing
+      const blockSongs = byBlock[activeBlock] || [];
+      if (!blockSongs.length) return;
+
+      let songCursor = activeStart;
+      let activeSongId = blockSongs[0].id; // default to first
+      for (const s of blockSongs) {
+        const dur = Math.ceil(parseDuration(s.duration) / 60);
+        if (NOW >= songCursor && NOW < songCursor + dur) {
+          activeSongId = s.id;
+          break;
+        }
+        songCursor += dur;
+      }
+
+      const songLink = document.querySelector(`a[href*="${activeSongId}"]`);
+      if (!songLink) return;
+      const songLi = songLink.closest('li');
+      if (!songLi) return;
+
+      const timelineEl = document.querySelector('.timeline');
+      const tlTop = timelineEl.getBoundingClientRect().top;
+      const liRect = songLi.getBoundingClientRect();
+      const top = liRect.top - tlTop + liRect.height / 2;
+
+      const marker = document.createElement('div');
+      marker.style.cssText = `position:absolute;left:40px;width:calc(9.4% + 22px);top:${top}px;height:1px;background:#d4af37;opacity:0.6;z-index:10;transform:translateY(-50%);pointer-events:none;`;
+      timelineEl.appendChild(marker);
+    }
+
     const v = Date.now();
     Promise.all([
       fetch(`blocks.csv?v=${v}`).then(r => r.text()),
       fetch(`playlist.csv?v=${v}`).then(r => r.text())
     ]).then(([blocksText, playlistText]) => {
-      buildTimeline(parseCSV(blocksText), parseCSV(playlistText));
+      const blocks = parseCSV(blocksText);
+      const songs = parseCSV(playlistText);
+      buildTimeline(blocks, songs);
+      setTimeout(() => placeCurrentTimeMarker(blocks, songs), 1500);
     }).catch(err => {
       document.getElementById('timeline').innerHTML =
         '<p style="color:#c00;font-family:sans-serif;padding:20px">Greška pri učitavanju CSV-a. Otvori stranicu preko servera (ne file://).<br><small>' + err + '</small></p>';
