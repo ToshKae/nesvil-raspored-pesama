@@ -10,7 +10,7 @@ x-e4dfAnORk,Luckasta si ti,mandatory,3:28,starogradska,Miroslav Ilic,m
 zhgpLHjPe24,Moja mala nema mane,optional,3:30,starogradska,Zvonko Bogdan,m
 ygAXxdeGr3M,"Ej, Branka, Branka",mandatory,3:45,starogradska,Toma Zdravkovic,m
 EK9gk-OCP88,Ti meni lažeš sve,mandatory,4:00,starogradska,Nenad Milevski,m
-b2_hKiDoXXY,Svilen konac (Instrumental),mandatory,3:32,pauza_muzike,Aleksandar Šišić,mp3
+BgQMU3gIIJ8,Veseli se kucni domacine (instrumental),mandatory,2:57,pre_ulaska,Ivan Zivkovic,inst
 mF4uRu8dX_M,Hvatanje bidermajera,mandatory,5:00,bidermajer,Televizija da,inst
 iW5FA-ituzQ,Prodji sa mnom ispod duge,mandatory,3:11,prvi_ples,Bojana Barjaktarevic,f
 qrhnxvGteC8,Trebaš mi,mandatory,3:59,prvi_ples,Darko Filipovic,m
@@ -82,7 +82,7 @@ BHFWk7DoWp0,Ptico moja beli labude,mandatory,4:22,pijani_kraj,Baja Mali Knindža
 skchtk-GJn0,Nije ljubav fotografija,mandatory,3:50,prelaz1,Sasa Matic,m
 1yM4tyZD3hs,Miki mićo,mandatory,3:11,veselje,Lepa Brena,f
 3iTryOWivIQ,"Nije vetar, nije kisa",backlog,3:18,veselje,Elma,f
-Qdi1rr-la6Q,Isti igraci,mandatory,3:34,veselje,Goran Vukosic I Mina Kostic,duo
+Qdi1rr-la6Q,Isti igrači,mandatory,3:34,veselje,Goran Vukosic I Mina Kostic,duo
 vTW7_cg10ws,Nevera moja,backlog,3:10,veselje,Vesna Zmijanac,f
 rvXQEMcoQiA,Crna ruža,mandatory,3:48,folk,Halid Beslic,m
 rcqevcKahas,I zanesen tom lepotom,optional,3:36,folk,Halid Beslic,m
@@ -145,9 +145,11 @@ HS7eJEUYtyU,Kad zamirišu jorgovani,mandatory,3:36,posle_torte,Vesna Zmijanac & 
 sTcHTM1njeU,Zlatiborske zore,backlog,3:03,veselje,Ana Bekuta,f
 -gl45fwodMY,Mi se volimo,optional,3:06,veselje,Semsa Suljakovic I Juzni Vetar,duo
 m06f866RucU,Čaršija,backlog,4:06,pijani_kraj,Al Dino,m
-gefp9ta8LTA,Makedonsko devojče (instrumental),optional,3:29,pauza_muzike,Camie Florien,mp3
-17L7R6uoAMw,Ajde jano (instrumental),optional,3:24,pauza_muzike,Marko Ristic,mp3
-BgQMU3gIIJ8,Veseli se kucni domacine (instrumental),backlog,2:57,pauza_muzike,Ivan Zivkovic,mp3
-sApt87Ox1pQ,Moj dilbere (instrumental),backlog,1:46,pauza_muzike,Radojka Živković,mp3
-ATPjDH3js6k,Cudna jada (instrumental),backlog,2:59,pauza_muzike,Marko Ristic,mp3
-AXunlAFNEzU,Odlazis odlazis (instrumental),optional,3:28,pauza_muzike,Senad Hodzic,mp3
+gefp9ta8LTA,Makedonsko devojče (instrumental),mandatory,3:29,pre_ulaska,Camie Florien,inst
+17L7R6uoAMw,Ajde jano (instrumental),optional,3:24,pre_ulaska,Marko Ristic,inst
+sApt87Ox1pQ,Moj dilbere (instrumental),backlog,1:46,pre_ulaska,Radojka Živković,inst
+ATPjDH3js6k,Cudna jada (instrumental),backlog,2:59,pre_ulaska,Marko Ristic,inst
+Y_xUHRG2tsU,Jesu l' dunje procvale (inst),optional,2:03,pre_ulaska,Marko Ristic,inst
+AXunlAFNEzU,Odlaziš odlaziš (instrumental),optional,3:28,pre_ulaska,Senad Hodzic,inst
+b2_hKiDoXXY,Svilen konac (Instrumental),mandatory,3:32,pre_ulaska,Aleksandar Šišić,inst
+8dLGIb0HHFA,Instrumentalna muzika,optional,15:00,pauza_muzike,nn,mp3

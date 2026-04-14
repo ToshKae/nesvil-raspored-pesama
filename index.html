@@ -524,10 +524,10 @@
         <button class="theme-toggle theme-toggle-inline" onclick="toggleTheme()"><span class="opt active" id="opt-light">Svetla</span><span class="opt" id="opt-dark">Tamna</span></button>
       </div>
       <a class="full-program-link" href="https://toshkae.github.io/nesvil-svecana-sala/program.html" target="_blank" rel="noopener">Klikni ovde za ceo program večeri — 31.05.2026. ↗</a>
+      <hr style="border:none;border-top:1px solid rgba(212,175,55,0.3);margin-top:16px;margin-bottom:0;">
     </header>
 
-
-    <div class="timeline">
+    <div class="timeline" style="margin-top:40px;">
 
       <div class="block">
         <div class="time-col">
@@ -618,7 +618,7 @@
       const timeline = document.getElementById('timeline');
       const sorted = blocks.slice().sort((a, b) => +a.order_id - +b.order_id);
 
-      let cursor = '16:20'; // start after slikanje
+      let cursor = '16:00'; // start at pre_ulaska
 
       timeline.innerHTML = sorted.map((b, idx) => {
         const list = byBlock[b.block] || [];
@@ -762,7 +762,7 @@
       const _now = new Date();
       const NOW_SECS = _now.getHours() * 3600 + _now.getMinutes() * 60 + _now.getSeconds();
       const NOW = Math.floor(NOW_SECS / 60);
-      if (NOW < 16 * 60 + 23 || NOW >= 22 * 60 + 55) return;
+      if (NOW < 16 * 60 || NOW >= 22 * 60 + 55) return;
 
       const byBlock = {};
       songs.forEach(s => {
