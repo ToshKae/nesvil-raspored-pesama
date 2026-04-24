@@ -10,7 +10,7 @@ x-e4dfAnORk,Luckasta si ti,mandatory,3:28,starogradska,Miroslav Ilic,m
 zhgpLHjPe24,Moja mala nema mane,optional,3:30,starogradska,Zvonko Bogdan,m
 ygAXxdeGr3M,"Ej, Branka, Branka",mandatory,3:45,starogradska,Toma Zdravkovic,m
 EK9gk-OCP88,Ti meni lažeš sve,mandatory,4:00,starogradska,Nenad Milevski,m
-BgQMU3gIIJ8,Veseli se kucni domacine (instrumental),mandatory,2:57,pre_ulaska,Ivan Zivkovic,inst
+BgQMU3gIIJ8,Veseli se kucni domacine (instrumental),backlog,2:57,pre_ulaska,Ivan Zivkovic,inst
 mF4uRu8dX_M,Hvatanje bidermajera,mandatory,5:00,bidermajer,Televizija da,inst
 iW5FA-ituzQ,Prodji sa mnom ispod duge,mandatory,3:11,prvi_ples,Bojana Barjaktarevic,f
 qrhnxvGteC8,Trebaš mi,mandatory,3:59,prvi_ples,Darko Filipovic,m
@@ -37,8 +37,9 @@ Q-7m89hFLDE,Košava,mandatory,3:33,pred_kolo,Zorica Brunclik,f
 dq8erD8lHZQ,Veseljak,mandatory,2:55,pred_kolo,Ana Bekuta,f
 dylQmqvrWWA,Kolo na svadbi,mandatory,13:41,kolo,Mix Kola,inst
 B6nUHOkLBuM,Moravac,backlog,3:30,kolo,Radojka Živković,inst
+Cl4vSpuXJos,Aj veseli se kucni domacine,optional,3:00,folk,Beki Bekic,m
 Tm-X7TWEemM,Alaj mi je večeras po volji,mandatory,2:57,folk,Jasna Đokić,f
-L-oP3NbHpB4,Dao bih ovo malo života,mandatory,4:20,folk,Nenad Milevski,m
+L-oP3NbHpB4,Dao bih ovo malo života,backlog,4:20,folk,Nenad Milevski,m
 2f-JBKQguaY,Što je lepo kad se neko voli,mandatory,4:07,folk,Merima Njegomir,f
 4WpOJ0RUyC0,Ivanova korita,mandatory,3:20,folk,Merima Njegomir,f
 2QLllufPXe8,Oj djevojko Milijana,backlog,2:32,folk,Beki Bekic,m
@@ -150,6 +151,7 @@ gefp9ta8LTA,Makedonsko devojče (instrumental),mandatory,3:29,pre_ulaska,Camie F
 sApt87Ox1pQ,Moj dilbere (instrumental),backlog,1:46,pre_ulaska,Radojka Živković,inst
 ATPjDH3js6k,Cudna jada (instrumental),backlog,2:59,pre_ulaska,Marko Ristic,inst
 Y_xUHRG2tsU,Jesu l' dunje procvale (inst),optional,2:03,pre_ulaska,Marko Ristic,inst
+Jb6G_hsbtPs,Zvjezda tera meseca (instrumental),optional,2:03,pre_ulaska,Marko Ristic,inst
 AXunlAFNEzU,Odlaziš odlaziš (instrumental),optional,3:28,pre_ulaska,Senad Hodzic,inst
 b2_hKiDoXXY,Svilen konac (Instrumental),mandatory,3:32,pre_ulaska,Aleksandar Šišić,inst
 8dLGIb0HHFA,Instrumentalna muzika,optional,15:00,pauza_muzike,nn,mp3
