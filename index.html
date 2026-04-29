@@ -849,7 +849,6 @@
       const songs = parseCSV(playlistText);
       buildTimeline(blocks, songs);
       setTimeout(() => placeCurrentTimeMarker(blocks, songs), 1500);
-      setInterval(() => placeCurrentTimeMarker(blocks, songs), 15000);
     }).catch(err => {
       document.getElementById('timeline').innerHTML =
         '<p style="color:#c00;font-family:sans-serif;padding:20px">Greška pri učitavanju CSV-a. Otvori stranicu preko servera (ne file://).<br><small>' + err + '</small></p>';
