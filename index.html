@@ -386,6 +386,15 @@
 
     .songs li a:hover .play-icon { opacity: 1; }
 
+    .songs li.song-current {
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.13);
+    }
+    body.dark .songs li.song-current {
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.18);
+    }
+
     .no-songs {
       font-size: 0.8rem;
       color: #bbb;
@@ -815,6 +824,8 @@
       if (!songLink) return;
       const songLi = songLink.closest('li');
       if (!songLi) return;
+      document.querySelectorAll('.song-current').forEach(el => el.classList.remove('song-current'));
+      songLi.classList.add('song-current');
 
       const timelineEl = document.querySelector('.timeline');
       const tlTop = timelineEl.getBoundingClientRect().top;
