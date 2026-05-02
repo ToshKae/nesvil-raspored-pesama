@@ -15,12 +15,12 @@ BgQMU3gIIJ8,Veseli se kućni domaćine (instrumental),backlog,2:57,pre_ulaska,Iv
 mF4uRu8dX_M,Hvatanje bidermajera,mandatory,5:00,bidermajer,Televizija da,inst
 iW5FA-ituzQ,Prodji sa mnom ispod duge,mandatory,3:11,prvi_ples,Bojana Barjaktarevic,f
 qrhnxvGteC8,Trebaš mi,mandatory,3:59,prvi_ples,Darko Filipovic,m
-rtbWT5HPJTk,Imati pa nemati,mandatory,4:23,prelaz1,Nenad Milevski,m
-E28RTAl911I,Ni jedne usne se ne ljube same,mandatory,3:17,prelaz1,Dzej,m
+rtbWT5HPJTk,Imati pa nemati,mandatory,4:23,posle_plesa,Nenad Milevski,m
+E28RTAl911I,Ni jedne usne se ne ljube same,mandatory,3:17,posle_plesa,Dzej,m
 qvt8YryShhU,Samo jednu ljubav imam,mandatory,3:44,pop_rock,Vlada Divljan,m
 eWVnVlZ71vo,Meni trebaš ti,mandatory,3:25,pop_rock,Oliver Dragojević,m
 5ubSStQwcKY,"Mjerkam te, mjerkam",mandatory,5:12,pop_rock,Zdravko Colic,m
-6UmG7L7QuUM,Tri u jednoj,mandatory,3:44,prelaz1,Marinko Rokvic,m
+6UmG7L7QuUM,Tri u jednoj,mandatory,3:44,posle_plesa,Marinko Rokvic,m
 f46LkPDypSY,Ne može nam niko ništa,mandatory,3:37,turbofolk,Mitar Miric,m
 wwLKUZZEEMg,Usne vrele kao žar,mandatory,2:52,veselje,Nino,m
 sT3kZ6JcwCE,Radjaj sinove,mandatory,3:20,veselje,Dzej,m
@@ -81,7 +81,7 @@ UyjOlX3gQEY,Oficir s ružom,mandatory,4:09,pop_folk,Nedeljko Bajić Baja,m
 JtO-8qS2G98,Budi uvijek sretna,mandatory,3:44,folk,Halid Beslic,m
 kcNPzW9vhHM,Danka,mandatory,2:47,pijani_kraj,Toma Zdravković,m
 BHFWk7DoWp0,Ptico moja beli labude,mandatory,4:22,pijani_kraj,Baja Mali Knindža,m
-skchtk-GJn0,Nije ljubav fotografija,mandatory,3:50,prelaz1,Sasa Matic,m
+skchtk-GJn0,Nije ljubav fotografija,mandatory,3:50,posle_plesa,Sasa Matic,m
 1yM4tyZD3hs,Miki mićo,mandatory,3:11,veselje,Lepa Brena,f
 3iTryOWivIQ,"Nije vetar, nije kisa",backlog,3:18,veselje,Elma,f
 Qdi1rr-la6Q,Isti igrači,mandatory,3:34,veselje,Goran Vukosic I Mina Kostic,duo
@@ -91,6 +91,7 @@ rcqevcKahas,I zanesen tom lepotom,optional,3:36,folk,Halid Beslic,m
 iTYwhD09IU4,Nesanica,backlog,3:19,pijani_kraj,Nikola Kojo,m
 j8IgRoNanjw,O djila,optional,3:35,kafanska,Haris Dzinovic,m
 8CUmcEHO4R8,Jesul dunje procvale,backlog,3:06,kafanska,Haris Dzinovic,m
+vNGq4VeVMGc,I kad me svi zaborave,backlog,3:09,kafanska,Marinko Rokvic,m
 QoqlO72ORw8,Sta ce ti pevacica,backlog,2:36,turbofolk,Jana,f
 EdShTsW0NmE,Crna golubice,backlog,3:27,veselje,Slaviša Vujić,m
 hT3eUUfR6Wk,Ivana,backlog,3:26,veselje,Medeni Mesec,m
@@ -115,7 +116,7 @@ mZ-FKcyJIQo,Dančе,backlog,3:29,folk,Predrag Zivkovic Tozovac,m
 5q9pY_2Gp30,Potopiću ovaj splav,mandatory,3:29,turbofolk,Stoja,f
 2mKdXXJi2fg,Kad zaigra srce od meraka,mandatory,4:12,folk,Halid Beslic,m
 Uz2w1qEv_d4,Danče instrumental (uz tortu),mandatory,3:23,torta,Predrag Živković Tozovac,mp3
-iPQyFLLXdbo,Uz šampanjac kupolu,mandatory,3:14,torta,Oliver Dragojević,mp3
+iPQyFLLXdbo,Bez tebe remix (uz šampanjac kupolu),mandatory,3:14,torta,Oliver Dragojević,mp3
 iYsRr8zNZUM,Požuri,optional,3:25,folk,Halid Beslic,m
 At_VVI7qOR4,Žal,mandatory,4:01,pijani_kraj,Saban Saulic,m
 rcVca5Xno68,Okano,backlog,4:01,pop_rock,Zdravko Colic,m
