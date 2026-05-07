@@ -31,9 +31,9 @@ GfaEukWScfY,Pitaju me u mom kraju,mandatory,2:57,veselje,Dragana Mirkovic,f
 Ti9JMqTes5Q,Neodoljiv neumoljiv,mandatory,2:46,veselje,Ceca,f
 jphNlN8TDaw,Tri života srca tri,backlog,2:48,veselje,Nada Topcagic,f
 TskYcRu1JVw,Da li si me voljela il nisi,backlog,3:35,veselje,Sejo Kalac,m
+sTcHTM1njeU,Zlatiborske zore,optional,3:03,pred_kolo,Ana Bekuta,f
 Q-7m89hFLDE,Košava,mandatory,3:33,pred_kolo,Zorica Brunclik,f
 dq8erD8lHZQ,Veseljak,mandatory,2:55,pred_kolo,Ana Bekuta,f
-DCxQPUE-7ro,Kolo ljubavi,mandatory,3:47,pred_kolo,Louis,m
 dylQmqvrWWA,Kolo na svadbi,mandatory,13:41,kolo,Mix Kola,inst
 B6nUHOkLBuM,Moravac,backlog,3:30,kolo,Radojka Živković,inst
 Cl4vSpuXJos,Aj veseli se kućni domaćine,optional,3:00,folk,Beki Bekic,m
@@ -94,8 +94,8 @@ j8IgRoNanjw,O djila,optional,3:35,kafanska,Haris Dzinovic,m
 vNGq4VeVMGc,I kad me svi zaborave,backlog,3:09,kafanska,Marinko Rokvic,m
 QoqlO72ORw8,Sta ce ti pevacica,backlog,2:36,turbofolk,Jana,f
 EdShTsW0NmE,Crna golubice,backlog,3:27,veselje,Slaviša Vujić,m
-hT3eUUfR6Wk,Ivana,backlog,3:26,veselje,Medeni Mesec,m
 f163HVZPKe8,Pola vino pola voda,mandatory,3:21,veselje,Bane Bojanic,m
+hT3eUUfR6Wk,Ivana,optional,3:26,veselje,Medeni Mesec,m
 vO9pgvv7qgg,Medena,mandatory,3:58,veselje,Medenjaci,m
 Dy-BZGeVU00,Crveni lak,backlog,3:12,veselje,Sanja Dordjevic,f
 Di7qSUe4muk,Kada bi me pitali,mandatory,3:02,folk,Zorica Brunclik,f
@@ -116,7 +116,8 @@ Sa-yQtOUdmM,Slike u oku,mandatory,3:56,folk,Nenad Milevski,m
 mZ-FKcyJIQo,Dančе,backlog,3:29,folk,Predrag Zivkovic Tozovac,m
 5q9pY_2Gp30,Potopiću ovaj splav,mandatory,3:29,turbofolk,Stoja,f
 2mKdXXJi2fg,Kad zaigra srce od meraka,mandatory,4:12,folk,Halid Beslic,m
-Uz2w1qEv_d4,Danče instrumental (uz tortu),mandatory,3:23,torta,Predrag Živković Tozovac,mp3
+DCxQPUE-7ro,Kolo ljubavi,mandatory,3:47,torta,Louis,m
+Uz2w1qEv_d4,Danče instrumental (uz tortu),backlog,3:23,torta,Predrag Živković Tozovac,mp3
 iPQyFLLXdbo,Bez tebe remix (uz šampanjac kupolu),mandatory,3:14,torta,Oliver Dragojević,mp3
 iYsRr8zNZUM,Požuri,optional,3:25,folk,Halid Beslic,m
 At_VVI7qOR4,Žal,mandatory,4:01,pijani_kraj,Saban Saulic,m
@@ -146,7 +147,6 @@ HS7eJEUYtyU,Kad zamirišu jorgovani,mandatory,3:36,pop_rock,Vesna Zmijanac & Din
 VTEHyFQfI4c,Zaboravi broj,mandatory,3:39,veselje,Natasa Djordjevic,f
 6dFQZZzMI9U,Mutivoda,mandatory,3:00,veselje,Sanja Djordjevic,f
 -gl45fwodMY,Mi se volimo,backlog,3:06,veselje,Semsa Suljakovic I Juzni Vetar,duo
-sTcHTM1njeU,Zlatiborske zore,optional,3:03,veselje,Ana Bekuta,f
 m06f866RucU,Čaršija,backlog,4:06,pijani_kraj,Al Dino,m
 gefp9ta8LTA,Makedonsko devojče (instrumental),mandatory,3:29,pre_ulaska,Camie Florien,inst
 17L7R6uoAMw,Ajde jano (instrumental),optional,3:24,pre_ulaska,Marko Ristic,inst
